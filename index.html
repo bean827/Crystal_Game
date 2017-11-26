@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Week 4 - Crystals Collector</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Crystals Collector">
+    
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+ 	<script src="assets/game.js"></script>
+
+ 	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+	
+
+	<link rel="stylesheet" type="text/css" href="assets/styles.css">
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<div class="jumbotron">
+			<!-- header at the top -->
+			<h1>Crystals Collector!</h1>
+			<!-- then come instructions -->
+			<h4><small>You will be given a random number at the start of the game.</small></h4>
+			<h4><small>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</small></h4>
+			<h4><small>You win the game by matching your total score to random number. You lose the game if your total score goes above the random number.</small></h4>
+			<h4><small>The value of each crystal is hidden from you until you click on it.</small></h4>
+			<h4><small>Each time when the game starts, the game will change the values of each crystal.</small></h4>
+		</div>
+
+		<!-- random number div and wins/losses div -->
+		<div class="row">
+			<div class="col-md-3 col-md-offset-1 randomNumberDiv">
+				<h2 id="randomNumber">random#</h2>
+			</div>
+			<div class="col-md-3 col-md-offset-1 winsLossesDiv">
+				<p id="winsTally">Wins: </p>
+				<p id="lossesTally">losses: </p>
+			</div>
+		</div>
+
+		<!-- gems -->
+		<div class="row">
+			<div class="col-md-1 col-md-offset-1 gem" value="gem1">
+				<img src="assets/images/gem1.jpg" class="img-responsive" alt="Gem1">
+			</div>
+			<div class="col-md-1 col-md-offset-1 gem" value="gem2">
+				<img src="assets/images/gem2.jpg" alt="Gem2" width="60px" height="60px">
+			</div>
+			<div class="col-md-1 col-md-offset-1 gem" value="gem3">
+				<img src="assets/images/gem3.jpg" class="img-responsive" alt="Gem3">
+			</div>
+			<div class="col-md-1 col-md-offset-1 gem" value="gem4">
+				<img src="assets/images/gem4.jpg" class="img-responsive" alt="Gem4">
+			</div>
+		</div>
+		
+		<!-- score text row -->
+		<div class="row">
+			<div class="col-md-3 col-md-offset-1 scoreDiv">
+				<p>Your total score is:</p>
+			</div>
+		</div>
+
+		<!-- user score div -->
+		<div class="row">
+			<div class="col-md-3 col-md-offset-1 scoreDiv">
+				<h2 id="userScore">score</h2>
+			</div>
+		</div>
+	
+	<!-- now end the container	 -->
+	</div>
+
+	<!-- Link to game javascript  -->
+	<script type="text/javascript" src="assets/game.js"></script>
+
+</body>
+
+</html>
