@@ -1,5 +1,9 @@
 body {
-	background: url("../images/dark_embroidery.png");
+	background: blue;
+}
+
+.jumbotron {
+	text-align: center;
 }
 
 .row {
@@ -7,13 +11,17 @@ body {
 }
 
 .randomNumberDiv {
-	background-color: lightgreen;
+	background-color: red;
+	text-align: center;
+
 }
 
 .winsLossesDiv {
-	background-color: lightblue;
+	background-color: green;
+	text-align: center;
 }
 
 .scoreDiv {
-	background-color: pink;
+	background-color: orange;
+	text-align: center;
 }
