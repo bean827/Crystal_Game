@@ -1,34 +1,30 @@
 $(document).ready(function() {
 
-	// =============================
-	// Set up global variables first
-	// =============================
 
-	// initialize global variables
+
+	// set global variables
 	var gemOneValue, gemTwoValue, gemThreeValue, gemFourValue;
 	var wins = 0;
 	var losses = 0;
-	// randomComputerNumber is the random digit computer will generage
+	// randomComputerNumber for random number on restart
 	var randomComputerNumber;
-	// userTallyScore is the ongoing sum of gem values user has picked
+	// userTallyScore for sum of gem selection
 	var userTallyScore;
 
-	// ================
-	// Set up functions
-	// ================
+
 
 	// function that initializes the variables for each now round of the game
 	function initializeVariables() {
-		// have computer pick a number between 19-120
-		randomComputerNumber = 19 + Math.floor(Math.random() * 102);
-		// pick random gem values between 1-12
-		gemOneValue = 1 + Math.floor(Math.random() * 12);
-		gemTwoValue = 1 + Math.floor(Math.random() * 12);
-		gemThreeValue = 1 + Math.floor(Math.random() * 12);
-		gemFourValue = 1 + Math.floor(Math.random() * 12);
-		// set initial value of user's ongoing gem selections sum to 0
+		// computer picks a number between 19-120
+		randomComputerNumber = 18 + Math.floor(Math.random() * 102);
+		// pick random gem values between 1-10
+		gemOneValue = 1 + Math.floor(Math.random() * 10);
+		gemTwoValue = 1 + Math.floor(Math.random() * 10);
+		gemThreeValue = 1 + Math.floor(Math.random() * 10);
+		gemFourValue = 1 + Math.floor(Math.random() * 10);
+		// set users sum of gems to 0
 		userTallyScore = 0;
-		// update the html for the game board
+		// update game play divs
 		$("#winsTally").html("Wins: " + wins);
 		$("#lossesTally").html("Losses: " + losses);
 		$("#randomNumber").html(randomComputerNumber);
@@ -36,10 +32,7 @@ $(document).ready(function() {
 		consoleLogVariables();
 	}
 
-	// function to check if user has won or lost
-	// increment wins / losses in either case
-	// and then re-initialize variables for new round
-	// if user hasn't won or lost then nothing happens
+	
 	function hasUserWonOrLost() {
 		// check if user has lost
 		if (userTallyScore > randomComputerNumber) {
@@ -49,7 +42,7 @@ $(document).ready(function() {
 		}
 
 		// check if user has won
-		if (userTallyScore == randomComputerNumber) {
+		if (userTallyScore === randomComputerNumber) {
 			wins++;
 			console.log("user won");
 			initializeVariables();
